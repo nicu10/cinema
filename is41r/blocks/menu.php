@@ -17,15 +17,18 @@
           Cinema
         </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="index.php?module=cinema&action=create">Create</a>
+        <a class="dropdown-item" href="index.php?module=filme&action=create">Create</a>
         <a class="dropdown-item" href="index.php?module=cinema&action=read">Read</a>
         <a class="dropdown-item" href="index.php?module=cinema&action=delete">Delete</a>
         <a class="dropdown-item" href="index.php?module=cinema&action=ubdate">Ubdate</a>
       </div>
     </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?module=Register&action=reg">Registrare</a>
-      </li>
+
+        <a class="btn btn-outline-primary mr-2 " href="index.php?module=Register&action=reg">Registrare</a>
+
+
+        <a class="btn btn-outline-primary mr-2 " href="index.php?module=Register&action=auth">Autorizare</a>
+
     </ul>
   </div>
 </nav>

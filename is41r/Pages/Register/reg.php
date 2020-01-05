@@ -13,7 +13,7 @@
     <label for="pass">Parola</label>
     <input type="password" name="pass" id="pass" class="form-control">
 <div class="alert alert-danger mt-2" id="errorBlock"></div>
-    <button type="button" id="reg_user" class="btn btn-success mt-5">
+    <button type="button" id="reg_user" class="btn btn-success mt-1">
       Registrare
     </button>
   </form>
@@ -30,7 +30,7 @@ $('#reg_user').click(function () {
 
   $.ajax({
     type: "POST",
-    url: "Pages/Register/regg.php",
+    url: "ajax/reg_ajax.php",
     cache: false,
     data: {'username' : name, 'email' : email, 'login' : login, 'pass' : pass},
     dataType: 'html',
