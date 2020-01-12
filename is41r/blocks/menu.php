@@ -14,13 +14,11 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Cinema
+          Filme
         </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="index.php?module=filme&action=create">Create</a>
-        <a class="dropdown-item" href="index.php?module=cinema&action=read">Read</a>
-        <a class="dropdown-item" href="index.php?module=cinema&action=delete">Delete</a>
-        <a class="dropdown-item" href="index.php?module=cinema&action=ubdate">Ubdate</a>
+        <a class="dropdown-item" href="index.php?module=filme&action=read">Read</a>
       </div>
     </li>
 

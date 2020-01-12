@@ -1,14 +1,17 @@
 <?
-$result = mysqli_query($connection, "SELECT idBooks, Title, anul, photo FROM Books");
+$result = mysqli_query($connection, "SELECT * FROM filme");
 ?>
-<table class="table" >
+
+<table class="table">
     <thead>
     <tr>
         <th>ID</th>
-        <th>Name</th>
-         <th>anul</th>
-         <th>Photo</th>
-           <th></th>
+        <th>Denumirea</th>
+        <th>Anul</th>
+        <th>Regizor</th>
+        <th>Descrierea</th>
+        <th>Genul</th>
+        <th>Poster</th>
     </tr>
     </thead>
     <tbody>
@@ -16,14 +19,20 @@ $result = mysqli_query($connection, "SELECT idBooks, Title, anul, photo FROM Boo
         while($element = mysqli_fetch_assoc($result)){
             ?>
             <tr>
-                <td><?=$element['idBooks'];?></td>
-                <td><?=$element['Title'];?></td>
-                 <td><?=$element['anul'];?></td>
-                 <td><img style="max-width: 200px;" src="<?=$element['photo'];?>"></td>
-                 <td><a href="index.php?module=books&action=delete&idBooks=<?=$element['idBooks'];?>">Delete</a></td>
+                <td><?=$element['ID_film'];?></td>
+                <td><?=$element['Denumirea'];?></td>
+                <td><?=$element['Anul'];?></td>
+                <td><?=$element['Regizor'];?></td>
+                <td><?=$element['Descriere'];?></td>
+                <td><?=$element['Genul'];?></td>
+                <td><img style="max-width: 200px;" src="..\files\<?=$element['Poster'];?>"></td>
+                <td><a href="index.php?module=filme&action=delete&ID_film=<?=$element['ID_film'];?>">Delete</a></td>
+                <td><a href="index.php?module=filme&action=update&ID_film=<?=$element['ID_film'];?>">Update</a></td>
             </tr>
             <?
-        }?>
+        }
+        ?>
+
     </tbody>
 
 </table>
