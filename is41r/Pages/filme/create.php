@@ -15,8 +15,6 @@ if(!empty($_POST['Denumirea']) && !empty($_POST['Regizor']) && !empty($_POST['An
             $fileName = '';
         }
     }
-
-
     $query = "
       INSERT INTO filme
       SET
@@ -26,15 +24,11 @@ if(!empty($_POST['Denumirea']) && !empty($_POST['Regizor']) && !empty($_POST['An
           Regizor= '{$_POST['Regizor']}',
           Genul = '{$_POST['Genul']}',
           Descriere = '{$_POST['Descriere']}'
-
     ";
     $result = mysqli_query($connection, $query);
 }
 ?>
-<? if(!empty($_POST)) {?>
-    <?=$result?'Success':'Error';?>
-    <a href="index.php?module=filme&action=create">Mai adauga</a>
-<? } else {?>
+
 <form action="" method="post" enctype="multipart/form-data">
     Denumirea <input type="text" class="form-control" name="Denumirea">
     Regizor <input type="text" class="form-control" name="Regizor">
@@ -43,6 +37,4 @@ if(!empty($_POST['Denumirea']) && !empty($_POST['Regizor']) && !empty($_POST['An
     Descriere <input type="textarea" class="form-control" rows="3" name="Descriere">
     Poster <input type="file" class="btn btn-light mt-2 mb-2" name="Poster"><br>
   <input type="submit" class="btn btn-primary" value="upload">
-</form>
-  <? }?>
 </form>
